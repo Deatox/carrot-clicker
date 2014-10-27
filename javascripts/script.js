@@ -48,7 +48,7 @@ function buyTest(){
     var test_price = Math.floor(500 * Math.pow(1.1,tests));
     if(carrots >= test_price) {
         tests = tests + 1;
-        test_add = test_add += 5;
+        test_add = test_add += 10;
         carrots = carrots - test_price;
         Farm(0);
         document.getElementById('testcount').innerHTML = tests;
