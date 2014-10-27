@@ -29,7 +29,7 @@ function buyPicker(){
         Farm(0);
         document.getElementById('tractorcount').innerHTML = pickers;
     }
-    var Pnextprice = Math.floor(25 * Math.pow(1.1,pickers));
+    var Pnextprice = Math.floor(2 * Math.pow(1.1,pickers));
     document.getElementById('pickercost').innerHTML = "costs " + Pnextprice + " carrots";
 };
 
