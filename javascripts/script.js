@@ -19,6 +19,8 @@ var tests = 0;
 var test_add = 0;
 var pickers = 0;
 var picker_add = 0;
+var towns = 0;
+var town_add = 0;
 
 function buyPicker(){
     var picker_price = Math.floor(2 * Math.pow(1.1,pickers));
@@ -72,17 +74,17 @@ function buyTest(){
     document.getElementById('testcost').innerHTML = "costs " + Tenextprice + " carrots";
 };
 
-function buyTest(){
-    var test_price = Math.floor(500 * Math.pow(1.1,tests));
-    if(carrots >= test_price) {
+function buyTown(){
+    var town_price = Math.floor(500 * Math.pow(1.1,towns));
+    if(carrots >= town_price) {
         tests = tests + 1;
-        test_add = test_add += 10;
-        carrots = carrots - test_price;
+        town_add = town_add += 100;
+        carrots = carrots - town_price;
         Farm(0);
-        document.getElementById('testcount').innerHTML = tests;
+        document.getElementById('towncount').innerHTML = townss;
     }
-    var Tenextprice = Math.floor(500 * Math.pow(1.1,tests));
-    document.getElementById('testcost').innerHTML = "costs " + Tenextprice + " carrots";
+    var TWnextprice = Math.floor(500 * Math.pow(1.1,towns));
+    document.getElementById('towncost').innerHTML = "costs " + TWnextprice + " carrots";
 };
 
 window.setInterval(function() {
@@ -90,4 +92,5 @@ window.setInterval(function() {
     Farm(factory_add);
     Farm(test_add);
     Farm(picker_add);
+    Farm(town_add);
 }, 1000);
