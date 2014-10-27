@@ -81,7 +81,7 @@ function buyTown(){
         town_add = town_add += 100;
         carrots = carrots - town_price;
         Farm(0);
-        document.getElementById('towncount').innerHTML = townss;
+        document.getElementById('towncount').innerHTML = towns;
     }
     var TWnextprice = Math.floor(500 * Math.pow(1.1,towns));
     document.getElementById('towncost').innerHTML = "costs " + TWnextprice + " carrots";
