@@ -23,8 +23,8 @@ var picker_add = 0;
 function buyPicker(){
     var picker_price = Math.floor(2 * Math.pow(1.1,pickers));
     if(carrots >= picker_price) {
-        pickers = pickers + 0.5;
-        picker_add = picker_add + 1;
+        pickers = pickers + 1;
+        picker_add = picker_add + 0.5;
         carrots = carrots - picker_price;
         Farm(0);
         document.getElementById('tractorcount').innerHTML = pickers;
