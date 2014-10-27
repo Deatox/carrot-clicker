@@ -1,4 +1,4 @@
-        var carrots = 0;
+var carrots = 0;
 
 function Farm(val) {
     carrots = carrots + val;
@@ -29,7 +29,7 @@ function buyTractor(){
     document.getElementById('tractorcost').innerHTML = "costs " + Tnextprice + " carrots";
 };
 
-function buyTractor(){
+function buyFactory(){
     var factory_price = Math.floor(25 * Math.pow(1.1,tractors));
     if(carrots >= factory_price) {
         factories = factories + 1;
