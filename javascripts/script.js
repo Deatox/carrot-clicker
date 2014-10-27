@@ -1,4 +1,4 @@
-        var carrots = 10000000000000000000000000000000000000;
+        var carrots = 0;
 
 function Farm(val) {
     carrots = carrots + val;
@@ -18,7 +18,7 @@ function buyTractor(){
     var tractor_price = Math.floor(25 * Math.pow(1.1,tractors));
     if(carrots >= tractor_price) {
         tractors = tractors + 1;
-        tractor_add = tractor_add + 100;
+        tractor_add = tractor_add + 1;
         carrots = carrots - tractor_price;
         Farm(0);
         document.getElementById('tractorcount').innerHTML = tractors;
