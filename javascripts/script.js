@@ -1,4 +1,4 @@
-var carrots = 50000;
+var carrots = 0;
 
 function Farm(val) {
     carrots = carrots + val;
@@ -105,7 +105,7 @@ function buyMoon(){
 };
 
 function buyPlan(){
-    var plan_price = Math.floor(50000 * Math.pow(1.1,plans));
+    var plan_price = Math.floor(100000 * Math.pow(1.1,plans));
     if(carrots >= plan_price) {
         plans = plans + 1;
         plan_add = plan_add += 1000;
@@ -113,7 +113,7 @@ function buyPlan(){
         Farm(0);
         document.getElementById('plancount').innerHTML = plans;
     }
-    var Plnextprice = Math.floor(50000 * Math.pow(1.1,plans));
+    var Plnextprice = Math.floor(100000 * Math.pow(1.1,plans));
     document.getElementById('plancost').innerHTML = "costs " + Plnextprice + " carrots";
 };
 
