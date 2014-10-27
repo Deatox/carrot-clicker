@@ -1,4 +1,4 @@
-var carrots = 2500;
+var carrots = 10000;
 
 function Farm(val) {
     carrots = carrots + val;
@@ -21,6 +21,8 @@ var pickers = 0;
 var picker_add = 0;
 var towns = 0;
 var town_add = 0;
+var moons = 0;
+var moon_add = 0;
 
 function buyPicker(){
     var picker_price = Math.floor(2 * Math.pow(1.1,pickers));
@@ -87,10 +89,24 @@ function buyTown(){
     document.getElementById('towncost').innerHTML = "costs " + TWnextprice + " carrots";
 };
 
+function buyMoon(){
+    var moon_price = Math.floor(2500 * Math.pow(1.1,moons));
+    if(carrots >= moon_price) {
+        moons = moons + 1;
+        moon_add = moon_add += 500;
+        carrots = carrots - moon_price;
+        Farm(0);
+        document.getElementById('mooncount').innerHTML = moons;
+    }
+    var Mnextprice = Math.floor(10000 * Math.pow(1.1,moons));
+    document.getElementById('mooncost').innerHTML = "costs " + Mnextprice + " carrots";
+};
+
 window.setInterval(function() {
     Farm(tractor_add);
     Farm(factory_add);
     Farm(test_add);
     Farm(picker_add);
     Farm(town_add);
+    Farm(moon_add);
 }, 1000);
