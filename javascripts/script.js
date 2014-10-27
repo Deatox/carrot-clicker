@@ -53,7 +53,7 @@ function buyTest(){
         Farm(0);
         document.getElementById('testcount').innerHTML = tests;
     }
-    var Tenextprice = Math.floor(500 * Math.pow(1.1,factories));
+    var Tenextprice = Math.floor(500 * Math.pow(1.1,tests));
     document.getElementById('testcost').innerHTML = "costs " + Tenextprice + " carrots";
 };
 
