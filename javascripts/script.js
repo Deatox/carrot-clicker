@@ -23,8 +23,8 @@ function buyTractor(){
         Farm(0);
         document.getElementById('tractorcount').innerHTML = tractors;
     }
-    //var nextprice = Math.floor(25 * Math.pow(1.1,tractors));
-    //document.getElementById('tractorcost').innerHTML = "costs " + nextprice + " carrots";
+    var nextprice = Math.floor(25 * Math.pow(1.1,tractors));
+    document.getElementById('tractorcost').innerHTML = "costs " + nextprice + " carrots";
 };
 window.setInterval(function() {
     Farm(tractor_add);
