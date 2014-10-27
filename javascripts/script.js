@@ -1,4 +1,4 @@
-var carrots = 10000;
+var carrots = 0;
 
 function Farm(val) {
     carrots = carrots + val;
