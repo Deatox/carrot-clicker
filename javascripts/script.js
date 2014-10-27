@@ -25,7 +25,12 @@ function Farm(val) {
         document.title = carrots + " carrots - CarrotClicker";
     }
     CPS = tractor_add + factory_add + test_add + picker_add + town_add + moon_add + plan_add;
-    document.getElementById("CPS").innerHTML = CPS + " carrots per second";
+    if (CPS == 1) {
+        document.getElementById("CPS").innerHTML = CPS + " carrot per second";
+    }
+    else {
+        document.getElementById("CPS").innerHTML = CPS + " carrots per second";
+    }
 }
 
 function buyPicker(){
