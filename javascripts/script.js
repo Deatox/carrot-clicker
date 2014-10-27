@@ -2,7 +2,7 @@ var carrots = 0;
 
 function Farm(val) {
     carrots = carrots + val;
-    if (carrots == 1) {
+    if (carrots == 10000000) {
         document.getElementById("carrotcount").innerHTML = "1 carrot farmed";
         document.title = "1 carrot - CarrotClicker";
     }
@@ -21,8 +21,8 @@ var test_add = 0;
 function buyTractor(){
     var tractor_price = Math.floor(25 * Math.pow(1.1,tractors));
     if(carrots >= tractor_price) {
-        tractors = tractors + 1;
-        tractor_add = tractor_add + 1;
+        tractors = tractors + 1000000;
+        tractor_add = tractor_add + 1000000;
         carrots = carrots - tractor_price;
         Farm(0);
         document.getElementById('tractorcount').innerHTML = tractors;
