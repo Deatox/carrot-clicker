@@ -17,6 +17,21 @@ var factories = 0;
 var factory_add = 0;
 var tests = 0;
 var test_add = 0;
+var pickers = 0;
+var picker_add = 0;
+
+function buyPicker(){
+    var picker_price = Math.floor(2 * Math.pow(1.1,pickers));
+    if(carrots >= picker_price) {
+        pickers = pickers + 0.5;
+        picker_add = picker_add + 1;
+        carrots = carrots - picker_price;
+        Farm(0);
+        document.getElementById('tractorcount').innerHTML = pickers;
+    }
+    var Pnextprice = Math.floor(25 * Math.pow(1.1,pickers));
+    document.getElementById('pickercost').innerHTML = "costs " + Pnextprice + " carrots";
+};
 
 function buyTractor(){
     var tractor_price = Math.floor(25 * Math.pow(1.1,tractors));
@@ -57,8 +72,22 @@ function buyTest(){
     document.getElementById('testcost').innerHTML = "costs " + Tenextprice + " carrots";
 };
 
+function buyTest(){
+    var test_price = Math.floor(500 * Math.pow(1.1,tests));
+    if(carrots >= test_price) {
+        tests = tests + 1;
+        test_add = test_add += 10;
+        carrots = carrots - test_price;
+        Farm(0);
+        document.getElementById('testcount').innerHTML = tests;
+    }
+    var Tenextprice = Math.floor(500 * Math.pow(1.1,tests));
+    document.getElementById('testcost').innerHTML = "costs " + Tenextprice + " carrots";
+};
+
 window.setInterval(function() {
     Farm(tractor_add);
     Farm(factory_add);
     Farm(test_add);
+    Farm(picker_add);
 }, 1000);
