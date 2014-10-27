@@ -30,15 +30,15 @@ function buyTractor(){
 };
 
 function buyFactory(){
-    var factory_price = Math.floor(25 * Math.pow(1.1,tractors));
+    var factory_price = Math.floor(100 * Math.pow(1.1,tractors));
     if(carrots >= factory_price) {
         factories = factories + 1;
-        factory_add = factory_add + 1;
+        factory_add = factory_add += 10;
         carrots = carrots - factory_price;
         Farm(0);
         document.getElementById('factorycount').innerHTML = factories;
     }
-    var Fnextprice = Math.floor(25 * Math.pow(1.1,tractors));
+    var Fnextprice = Math.floor(100 * Math.pow(1.1,tractors));
     document.getElementById('factorycost').innerHTML = "costs " + Fnextprice + " carrots";
 };
 window.setInterval(function() {
