@@ -1,16 +1,4 @@
 var carrots = 0;
-
-function Farm(val) {
-    carrots = carrots + val;
-    if (carrots == 1) {
-        document.getElementById("carrotcount").innerHTML = "1 carrot farmed";
-        document.title = "1 carrot - CarrotClicker";
-    }
-    else {
-        document.getElementById("carrotcount").innerHTML = carrots + " carrots farmed";
-        document.title = carrots + " carrots - CarrotClicker";
-    }
-}
 var tractors = 0;
 var tractor_add = 0;
 var factories = 0;
@@ -25,6 +13,20 @@ var moons = 0;
 var moon_add = 0;
 var plans = 0;
 var plan_add = 0;
+
+function Farm(val) {
+    carrots = carrots + val;
+    if (carrots == 1) {
+        document.getElementById("carrotcount").innerHTML = "1 carrot farmed";
+        document.title = "1 carrot - CarrotClicker";
+    }
+    else {
+        document.getElementById("carrotcount").innerHTML = carrots + " carrots farmed";
+        document.title = carrots + " carrots - CarrotClicker";
+    }
+    CPS = tractor_add + factory_add + test_add + picker_add + town_add + moon_add + plan_add;
+    document.getElementById("CPS").innerHTML = CPS + " carrots per second";
+}
 
 function buyPicker(){
     var picker_price = Math.floor(2 * Math.pow(1.1,pickers));
