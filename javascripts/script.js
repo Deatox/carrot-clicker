@@ -105,7 +105,7 @@ function buyMoon(){
 };
 
 function buyPlan(){
-    var plan_price = Math.floor(50000 * Math.pow(1.1,plan));
+    var plan_price = Math.floor(50000 * Math.pow(1.1,plans));
     if(carrots >= plan_price) {
         plans = plans + 1;
         plan_add = plan_add += 1000;
