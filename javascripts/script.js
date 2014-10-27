@@ -38,7 +38,7 @@ function buyFactory(){
         Farm(0);
         document.getElementById('factorycount').innerHTML = factories;
     }
-    var Fnextprice = Math.floor(100 * Math.pow(1.1,tractors));
+    var Fnextprice = Math.floor(100 * Math.pow(1.1,factories));
     document.getElementById('factorycost').innerHTML = "costs " + Fnextprice + " carrots";
 };
 window.setInterval(function() {
