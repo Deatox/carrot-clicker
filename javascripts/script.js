@@ -1,4 +1,4 @@
-        var carrots = 1000000000000000000000000000;
+        var carrots = 10000000000000000000000000000000000000;
 
 function Farm(val) {
     carrots = carrots + val;
@@ -11,7 +11,7 @@ function Farm(val) {
         document.title = carrots + " carrots - CarrotClicker";
     }
 }
-var tractors = 0;
+var tractors = 1000;
 var tractor_add = 0;
 
 function buyTractor(){
