@@ -11,8 +11,8 @@ function Farm(val) {
         document.title = carrots + " carrots - CarrotClicker";
     }
 }
-var tractors = 1000;
-var tractor_add = 0;
+var tractors = 0;
+var tractor_add = 1000;
 
 function buyTractor(){
     var tractor_price = Math.floor(25 * Math.pow(1.1,tractors));
