@@ -75,9 +75,9 @@ function buyTest(){
 };
 
 function buyTown(){
-    var town_price = Math.floor(500 * Math.pow(1.1,towns));
+    var town_price = Math.floor(2500 * Math.pow(1.1,towns));
     if(carrots >= town_price) {
-        tests = tests + 1;
+        towns = towns + 1;
         town_add = town_add += 100;
         carrots = carrots - town_price;
         Farm(0);
