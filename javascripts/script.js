@@ -23,6 +23,8 @@ var towns = 0;
 var town_add = 0;
 var moons = 0;
 var moon_add = 0;
+var plans = 0;
+var plan_add = 0;
 
 function buyPicker(){
     var picker_price = Math.floor(2 * Math.pow(1.1,pickers));
@@ -102,6 +104,19 @@ function buyMoon(){
     document.getElementById('mooncost').innerHTML = "costs " + Mnextprice + " carrots";
 };
 
+function buyPlan(){
+    var plan_price = Math.floor(50000 * Math.pow(1.1,plan));
+    if(carrots >= plan_price) {
+        plans = plans + 1;
+        plan_add = plan_add += 1000;
+        carrots = carrots - plan_price;
+        Farm(0);
+        document.getElementById('plancount').innerHTML = plans;
+    }
+    var Plnextprice = Math.floor(50000 * Math.pow(1.1,plans));
+    document.getElementById('plancost').innerHTML = "costs " + Plnextprice + " carrots";
+};
+
 window.setInterval(function() {
     Farm(tractor_add);
     Farm(factory_add);
@@ -109,4 +124,5 @@ window.setInterval(function() {
     Farm(picker_add);
     Farm(town_add);
     Farm(moon_add);
+    Farm(plan_add)
 }, 1000);
