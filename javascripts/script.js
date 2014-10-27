@@ -33,7 +33,7 @@ function buyFactory(){
     var factory_price = Math.floor(100 * Math.pow(1.1,tractors));
     if(carrots >= factory_price) {
         factories = factories + 1;
-        factory_add = factory_add += 10;
+        factory_add = factory_add += 5;
         carrots = carrots - factory_price;
         Farm(0);
         document.getElementById('factorycount').innerHTML = factories;
