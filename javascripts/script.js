@@ -127,7 +127,7 @@ function buyPlan(){
 };
 
 function buyGal(){
-    var gal_price = Math.floor(10000 * Math.pow(1.1,gals));
+    var gal_price = Math.floor(1000000 * Math.pow(1.1,gals));
     if(carrots >= gal_price) {
         gals = gals + 1;
         gal_add = gal_add += 10000;
@@ -135,7 +135,7 @@ function buyGal(){
         Farm(0);
         document.getElementById('galcount').innerHTML = gals;
     }
-    var Gnextprice = Math.floor(10000 * Math.pow(1.1,gals));
+    var Gnextprice = Math.floor(1000000 * Math.pow(1.1,gals));
     document.getElementById('galcost').innerHTML = "costs " + Gnextprice + " carrots";
 };
 
