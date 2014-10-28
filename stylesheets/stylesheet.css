@@ -21,3 +21,8 @@ button {
 button:hover {
     background-color:#6bec84;
 }
+
+#CPS {
+    position: fixed;
+    text-align: left;
+}
