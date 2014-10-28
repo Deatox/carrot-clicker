@@ -22,7 +22,7 @@ button:hover {
     background-color:#6bec84;
 }
 
-#CPS {
+.side {
     position: fixed;
     text-align: left;
     font-family: "Copperplate Gothic Bold", "Copperplate";
