@@ -15,6 +15,8 @@ var plans = 0;
 var plan_add = 0;
 var gals = 0;
 var gal_add = 0;
+var verses = 0;
+var verse_add = 0;
 
 function Farm(val) {
     carrots = carrots + val;
@@ -139,6 +141,19 @@ function buyGal(){
     document.getElementById('galcost').innerHTML = "costs " + Gnextprice + " carrots";
 };
 
+function buyVerse(){
+    var verse_price = Math.floor(10000000 * Math.pow(1.1,verses));
+    if(carrots >= verse_price) {
+        verses = verses + 1;
+        verse_add = verse_add += 1000000;
+        carrots = carrots - verse_price;
+        Farm(0);
+        document.getElementById('galcount').innerHTML = verses;
+    }
+    var Vnextprice = Math.floor(1000000 * Math.pow(1.1,verses));
+    document.getElementById('versecost').innerHTML = "costs " + Vnextprice + " carrots";
+};
+
 window.setInterval(function() {
     Farm(tractor_add);
     Farm(factory_add);
@@ -148,4 +163,5 @@ window.setInterval(function() {
     Farm(moon_add);
     Farm(plan_add);
     Farm(gal_add);
+    Farm(verse_add);
 }, 1000);
