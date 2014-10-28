@@ -19,7 +19,7 @@ var save {
     save.verses = 0,
     save.verse_add = 0,
     save.bets = 0,
-    save.bet_add = 0,
+    save.bet_add = 0;
 }
 function Farm(val) {
     save.carrots = save.save.carrots + val;
