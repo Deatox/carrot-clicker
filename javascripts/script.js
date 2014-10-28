@@ -148,7 +148,7 @@ function buyVerse(){
         verse_add = verse_add += 1000000;
         carrots = carrots - verse_price;
         Farm(0);
-        document.getElementById('galcount').innerHTML = verses;
+        document.getElementById('versecount').innerHTML = verses;
     }
     var Vnextprice = Math.floor(1000000 * Math.pow(1.1,verses));
     document.getElementById('versecost').innerHTML = "costs " + Vnextprice + " carrots";
