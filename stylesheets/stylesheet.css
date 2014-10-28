@@ -28,3 +28,11 @@ button:hover {
     font-family: "Copperplate Gothic Bold", "Copperplate";
     font-size: 20px;
 }
+
+.corn {
+    float: right;
+}
+
+.cbutt:hover {
+    background-color: #FFFF66;
+}
