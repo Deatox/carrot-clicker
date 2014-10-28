@@ -27,6 +27,6 @@ button:hover {
 
 #ver {
     float: left;
-    float: bottom;
+    margin-top: 300px;
     position: fixed;
 }
