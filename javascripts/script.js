@@ -54,7 +54,7 @@ function buyTractor(){
     var tractor_price = Math.floor(25 * Math.pow(1.1,tractors));
     if(carrots >= tractor_price) {
         tractors = tractors + 1;
-        tractor_add = tractor_add + 1;
+        tractor_add = tractor_add + 0.5;
         carrots = carrots - tractor_price;
         Farm(0);
         document.getElementById('tractorcount').innerHTML = tractors;
@@ -67,7 +67,7 @@ function buyFactory(){
     var factory_price = Math.floor(100 * Math.pow(1.1,tractors));
     if(carrots >= factory_price) {
         factories = factories + 1;
-        factory_add = factory_add += 5;
+        factory_add = factory_add += 2;
         carrots = carrots - factory_price;
         Farm(0);
         document.getElementById('factorycount').innerHTML = factories;
@@ -93,7 +93,7 @@ function buyTown(){
     var town_price = Math.floor(2500 * Math.pow(1.1,towns));
     if(carrots >= town_price) {
         towns = towns + 1;
-        town_add = town_add += 100;
+        town_add = town_add += 50;
         carrots = carrots - town_price;
         Farm(0);
         document.getElementById('towncount').innerHTML = towns;
@@ -103,10 +103,10 @@ function buyTown(){
 };
 
 function buyMoon(){
-    var moon_price = Math.floor(2500 * Math.pow(1.1,moons));
+    var moon_price = Math.floor(10000 * Math.pow(1.1,moons));
     if(carrots >= moon_price) {
         moons = moons + 1;
-        moon_add = moon_add += 500;
+        moon_add = moon_add += 250;
         carrots = carrots - moon_price;
         Farm(0);
         document.getElementById('mooncount').innerHTML = moons;
