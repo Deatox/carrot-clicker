@@ -2,6 +2,7 @@ body {
     font-size:15px;
     font-family:'Lucida Grande', 'Lucida Sans Unicode', serif;
     text-align:center;
+    background-color: #E6B88A;
 }
 
 #tractorcost {
@@ -28,3 +29,5 @@ button:hover {
     font-family: "Copperplate Gothic Bold", "Copperplate";
     font-size: 20px;
 }
+
+
