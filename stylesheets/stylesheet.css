@@ -25,4 +25,5 @@ button:hover {
 #CPS {
     position: fixed;
     text-align: left;
+    font-weight: 300;
 }
