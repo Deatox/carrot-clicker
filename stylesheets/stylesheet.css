@@ -25,5 +25,6 @@ button:hover {
 #CPS {
     position: fixed;
     text-align: left;
-    font-weight: 300;
+    font-family: "Copperplate Gothic Bold", "Copperplate";
+    font-size: 20px;
 }
