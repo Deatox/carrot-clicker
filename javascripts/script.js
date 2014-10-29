@@ -1,4 +1,4 @@
-var carrots = 2000;
+var carrots = 0;
 var tractors = 0;
 var tractor_add = 0;
 var factories = 0;
